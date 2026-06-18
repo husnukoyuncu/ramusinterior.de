@@ -16,7 +16,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     if ($userOk && $passOk) {
         session_regenerate_id(true);
         $_SESSION['admin_logged_in'] = true;
-        header('Location: index.php');
+        header('Location: ' . admin_url('index.php'));
         exit;
     }
     $error = 'Kullanıcı adı veya şifre yanlış.';
@@ -24,7 +24,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 }
 
 if (is_logged_in()) {
-    header('Location: index.php');
+    header('Location: ' . admin_url('index.php'));
     exit;
 }
 ?>

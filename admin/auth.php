@@ -21,6 +21,14 @@ function is_logged_in(): bool {
     return !empty($_SESSION['admin_logged_in']);
 }
 
+/**
+ * Absolute /admin/... URL for a given file, so redirects resolve correctly
+ * regardless of whether the browser requested /admin or /admin/.
+ */
+function admin_url(string $file): string {
+    return '/admin/' . $file;
+}
+
 /** Call at the top of any page/endpoint that must be behind login. */
 function require_login(): void {
     if (is_logged_in()) return;
@@ -33,6 +41,6 @@ function require_login(): void {
         exit;
     }
 
-    header('Location: login.php');
+    header('Location: ' . admin_url('login.php'));
     exit;
 }

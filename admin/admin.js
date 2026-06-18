@@ -67,7 +67,7 @@
     }
     const res = await fetch(url, opts);
     if (res.status === 401) {
-      window.location.href = 'login.php';
+      window.location.href = '/admin/login.php';
       throw new Error('Oturum süresi doldu.');
     }
     const data = await res.json().catch(() => ({}));

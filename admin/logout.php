@@ -4,4 +4,4 @@ require __DIR__ . '/auth.php';
 
 $_SESSION = [];
 session_destroy();
-header('Location: login.php');
+header('Location: ' . admin_url('login.php'));

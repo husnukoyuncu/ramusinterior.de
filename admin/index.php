@@ -1,6 +1,15 @@
 <?php
 declare(strict_types=1);
 require __DIR__ . '/auth.php';
+
+// Without a trailing slash, relative asset URLs (admin.css, admin.js, logout.php)
+// resolve against the wrong base and the page loses its styling/scripts.
+$requestPath = parse_url($_SERVER['REQUEST_URI'] ?? '/', PHP_URL_PATH);
+if ($requestPath === '/admin') {
+    header('Location: /admin/' . (($_SERVER['QUERY_STRING'] ?? '') !== '' ? '?' . $_SERVER['QUERY_STRING'] : ''));
+    exit;
+}
+
 require_login();
 ?>
 <!DOCTYPE html>
