@@ -1570,16 +1570,16 @@
   /* ── DATA ────────────────────────────────────────────────────── */
   let PROJECTS = [];
   let CATEGORIES = [];
-  const CAT_I18N = {
-    gastro:    { de:'Gastronomie', en:'Gastronomy', tr:'Gastronomi', ru:'Рестораны', ar:'مطاعم' },
-    office:    { de:'Büro',        en:'Office',     tr:'Ofis',      ru:'Офисы',     ar:'مكاتب' },
-    fitness:   { de:'Fitness',     en:'Fitness',    tr:'Fitness',   ru:'Фитнес',    ar:'لياقة' },
-    werkstatt: { de:'Werkstatt',   en:'Workshop',   tr:'Atölye',    ru:'Автосервис',ar:'ورشة' },
-  };
   function catLabel(slug, l) {
-    if (CAT_I18N[slug]) return CAT_I18N[slug][l] || CAT_I18N[slug].de;
     const c = CATEGORIES.find(x => x.slug === slug);
-    return c ? c.label : slug;
+    if (!c) return slug;
+    return (c.labels && c.labels[l]) || c.label || slug;
+  }
+  /** Best available display name for a project in language l. */
+  function projName(p, l) {
+    if (!p || !p.name) return '';
+    if (typeof p.name === 'string') return p.name;
+    return p.name[l] || p.name.de || Object.values(p.name).find(Boolean) || '';
   }
 
   async function loadProjectsData() {
@@ -1608,10 +1608,7 @@
       + Object.entries(FILTER_ALL).map(([l, t]) => `<span class="${l}">${t}</span>`).join('')
       + '</button>'];
     slugs.forEach(slug => {
-      const i18n = CAT_I18N[slug];
-      const spans = i18n
-        ? Object.entries(i18n).map(([l, t]) => `<span class="${l}">${t}</span>`).join('')
-        : ['de','en','tr','ru','ar'].map(l => `<span class="${l}">${catLabel(slug, l)}</span>`).join('');
+      const spans = ['de','en','tr','ru','ar'].map(l => `<span class="${l}">${catLabel(slug, l)}</span>`).join('');
       buttons.push(`<button class="filt" data-f="${slug}" onclick="filter('${slug}')">${spans}</button>`);
     });
     wrap.innerHTML = buttons.join('');
@@ -1770,19 +1767,19 @@
   function renderProjects() {
     document.getElementById('pgrid').innerHTML = PROJECTS.map(p => `
       <div class="proj-card reveal" data-cat="${p.category}" onclick="openProject(${p.id})"
-           role="button" tabindex="0" aria-label="${p.name} – ${p.location}"
+           role="button" tabindex="0" aria-label="${projName(p, lang)} – ${p.location}"
            onkeydown="if(event.key==='Enter')openProject(${p.id})">
-        <img src="${p.images[0]}" alt="${p.name}" loading="lazy"
+        <img src="${p.images[0]}" alt="${projName(p, lang)}" loading="lazy"
              onerror="this.parentElement.style.background='linear-gradient(135deg,#1c1c1c,#2a2a2a)';this.remove()">
         <div class="proj-hover" aria-hidden="true">
           <div class="proj-hover-body">
             <div class="proj-tag">${catLabel(p.category, lang)}</div>
-            <div class="proj-name-h">${p.name}</div>
+            <div class="proj-name-h">${projName(p, lang)}</div>
             <div class="proj-meta">${p.location} &nbsp;·&nbsp; ${p.area}</div>
           </div>
         </div>
         <div class="proj-strip" aria-hidden="true">
-          <div class="proj-strip-name">${p.name}</div>
+          <div class="proj-strip-name">${projName(p, lang)}</div>
         </div>
       </div>
     `).join('');
@@ -1826,14 +1823,14 @@
       : '';
     document.getElementById('pmodal-box').innerHTML = `
       <div class="pmodal-img-wrap">
-        <img class="pmodal-img" id="pmodal-img" src="${p.images[curImgIdx]}" alt="${p.name}" loading="lazy">
+        <img class="pmodal-img" id="pmodal-img" src="${p.images[curImgIdx]}" alt="${projName(p, l)}" loading="lazy">
         <button class="pmodal-close" onclick="closeProject()" aria-label="Schließen">✕</button>
         ${arrows}
         ${dots}
       </div>
       <div class="pmodal-body">
         <div class="pmodal-tag">${catLabel(p.category, l)}</div>
-        <h2 class="pmodal-title">${p.name}</h2>
+        <h2 class="pmodal-title">${projName(p, l)}</h2>
         <div class="pmodal-meta">
           <div class="pmodal-mi">
             <div class="pmodal-ml">${T.location[l]||T.location.en}</div>

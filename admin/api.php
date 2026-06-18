@@ -155,8 +155,22 @@ if ($action === 'save_project') {
     }
 
     $content = [];
+    $name = [];
     foreach (['de', 'en', 'tr', 'ru', 'ar'] as $lang) {
         $content[$lang] = sanitize_html($p['content'][$lang] ?? '');
+        $nameVal = is_array($p['name'] ?? null) ? ($p['name'][$lang] ?? '') : '';
+        $name[$lang] = clean_text($nameVal, 200);
+    }
+    if (!array_filter($name)) {
+        // Legacy/plain-string name, or nothing entered at all.
+        $fallback = is_string($p['name'] ?? null) ? clean_text($p['name'], 200) : '';
+        $fallback = $fallback ?: 'Adsız Proje';
+        foreach ($name as $lang => &$v) { $v = $fallback; }
+        unset($v);
+    } else {
+        // Fill any language left blank with the German (default) value.
+        foreach ($name as $lang => &$v) { if ($v === '') $v = $name['de']; }
+        unset($v);
     }
 
     $projects = read_json_file($projectsFile);
@@ -165,7 +179,7 @@ if ($action === 'save_project') {
     $clean = [
         'id'       => $id,
         'category' => $category,
-        'name'     => clean_text($p['name'] ?? '', 200) ?: 'Adsız Proje',
+        'name'     => $name,
         'location' => clean_text($p['location'] ?? '', 200),
         'area'     => clean_text($p['area'] ?? '', 20),
         'year'     => clean_text($p['year'] ?? '', 10),
@@ -202,17 +216,45 @@ if ($action === 'delete_project') {
 }
 
 if ($action === 'save_category') {
-    $name = clean_text($body['name'] ?? '', 60);
-    if ($name === '') fail(400, 'Kategori adı boş olamaz.');
-    $categories = read_json_file($categoriesFile);
-    foreach ($categories as $c) {
-        if (mb_strtolower($c['label']) === mb_strtolower($name)) ok(['category' => $c]);
+    $labelsIn = $body['labels'] ?? null;
+    $labels = [];
+    foreach (['de', 'en', 'tr', 'ru', 'ar'] as $lang) {
+        $labels[$lang] = clean_text(is_array($labelsIn) ? ($labelsIn[$lang] ?? '') : '', 60);
     }
-    $slug = slugify($name);
+    if ($labels['de'] === '') fail(400, 'Almanca kategori adı boş olamaz.');
+    foreach ($labels as $lang => &$v) { if ($v === '') $v = $labels['de']; }
+    unset($v);
+
+    $categories = read_json_file($categoriesFile);
+    $editSlug = clean_text($body['slug'] ?? '', 60);
+
+    if ($editSlug !== '') {
+        // Editing an existing category: keep its slug, update labels only.
+        $found = false;
+        foreach ($categories as &$c) {
+            if ($c['slug'] === $editSlug) {
+                $c['labels'] = $labels;
+                $c['label'] = $labels['de'];
+                $found = true;
+                $category = $c;
+                break;
+            }
+        }
+        unset($c);
+        if (!$found) fail(404, 'Kategori bulunamadı.');
+        write_json_file($categoriesFile, $categories);
+        ok(['category' => $category]);
+    }
+
+    // Creating a new category.
+    foreach ($categories as $c) {
+        if (mb_strtolower($c['label']) === mb_strtolower($labels['de'])) ok(['category' => $c]);
+    }
+    $slug = slugify($labels['de']);
     $existingSlugs = array_column($categories, 'slug');
     $unique = $slug; $i = 2;
     while (in_array($unique, $existingSlugs, true)) { $unique = $slug . '-' . $i++; }
-    $category = ['slug' => $unique, 'label' => $name];
+    $category = ['slug' => $unique, 'label' => $labels['de'], 'labels' => $labels];
     $categories[] = $category;
     write_json_file($categoriesFile, $categories);
     ok(['category' => $category]);

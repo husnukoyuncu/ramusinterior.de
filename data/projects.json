@@ -2,7 +2,13 @@
     {
         "id": 6,
         "category": "office",
-        "name": "LVM Versicherungsbüro",
+        "name": {
+            "de": "LVM Versicherungsbüro",
+            "en": "LVM Versicherungsbüro",
+            "tr": "LVM Versicherungsbüro",
+            "ru": "LVM Versicherungsbüro",
+            "ar": "LVM Versicherungsbüro"
+        },
         "location": "Berlin",
         "area": "200",
         "year": "2020",
@@ -23,7 +29,13 @@
     {
         "id": 5,
         "category": "office",
-        "name": "Signal Iduna Versicherungsbüro",
+        "name": {
+            "de": "Signal Iduna Versicherungsbüro",
+            "en": "Signal Iduna Versicherungsbüro",
+            "tr": "Signal Iduna Versicherungsbüro",
+            "ru": "Signal Iduna Versicherungsbüro",
+            "ar": "Signal Iduna Versicherungsbüro"
+        },
         "location": "Berlin-Charlottenburg",
         "area": "400",
         "year": "2025",
@@ -57,7 +69,13 @@
     {
         "id": 10,
         "category": "werkstatt",
-        "name": "Reifen Bestellung 24",
+        "name": {
+            "de": "Reifen Bestellung 24",
+            "en": "Reifen Bestellung 24",
+            "tr": "Reifen Bestellung 24",
+            "ru": "Reifen Bestellung 24",
+            "ar": "Reifen Bestellung 24"
+        },
         "location": "Deutschland",
         "area": "250",
         "year": "2026",
@@ -81,7 +99,13 @@
     {
         "id": 1,
         "category": "gastro",
-        "name": "L'Adresse Shisha Club & Bar",
+        "name": {
+            "de": "L'Adresse Shisha Club & Bar",
+            "en": "L'Adresse Shisha Club & Bar",
+            "tr": "L'Adresse Shisha Club & Bar",
+            "ru": "L'Adresse Shisha Club & Bar",
+            "ar": "L'Adresse Shisha Club & Bar"
+        },
         "location": "Berlin",
         "area": "480",
         "year": "2025",
@@ -103,7 +127,13 @@
     {
         "id": 8,
         "category": "gastro",
-        "name": "Eleganza Cafe",
+        "name": {
+            "de": "Eleganza Cafe",
+            "en": "Eleganza Cafe",
+            "tr": "Eleganza Cafe",
+            "ru": "Eleganza Cafe",
+            "ar": "Eleganza Cafe"
+        },
         "location": "Berlin, Unter den Linden",
         "area": "75",
         "year": "2023",
@@ -125,7 +155,13 @@
     {
         "id": 4,
         "category": "gastro",
-        "name": "Sour & Sweet Berlin",
+        "name": {
+            "de": "Sour & Sweet Berlin",
+            "en": "Sour & Sweet Berlin",
+            "tr": "Sour & Sweet Berlin",
+            "ru": "Sour & Sweet Berlin",
+            "ar": "Sour & Sweet Berlin"
+        },
         "location": "Berlin",
         "area": "650",
         "year": "2025",
@@ -150,7 +186,13 @@
     {
         "id": 7,
         "category": "gastro",
-        "name": "The Meat Steakhouse",
+        "name": {
+            "de": "The Meat Steakhouse",
+            "en": "The Meat Steakhouse",
+            "tr": "The Meat Steakhouse",
+            "ru": "The Meat Steakhouse",
+            "ar": "The Meat Steakhouse"
+        },
         "location": "Berlin",
         "area": "170",
         "year": "2018",
@@ -174,7 +216,13 @@
     {
         "id": 9,
         "category": "fitness",
-        "name": "Elite Kickboxing Studio",
+        "name": {
+            "de": "Elite Kickboxing Studio",
+            "en": "Elite Kickboxing Studio",
+            "tr": "Elite Kickboxing Studio",
+            "ru": "Elite Kickboxing Studio",
+            "ar": "Elite Kickboxing Studio"
+        },
         "location": "Berlin",
         "area": "800",
         "year": "2023",
@@ -196,7 +244,13 @@
     {
         "id": 3,
         "category": "gastro",
-        "name": "China Box",
+        "name": {
+            "de": "China Box",
+            "en": "China Box",
+            "tr": "China Box",
+            "ru": "China Box",
+            "ar": "China Box"
+        },
         "location": "Berlin",
         "area": "150",
         "year": "2019",
@@ -218,7 +272,13 @@
     {
         "id": 11,
         "category": "gastro",
-        "name": "Zeki Lounge",
+        "name": {
+            "de": "Zeki Lounge",
+            "en": "Zeki Lounge",
+            "tr": "Zeki Lounge",
+            "ru": "Zeki Lounge",
+            "ar": "Zeki Lounge"
+        },
         "location": "Leipzig",
         "area": "175",
         "year": "2022",

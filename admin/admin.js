@@ -19,9 +19,17 @@
     filter: 'all',
     draft: null,
     draftLang: 'de',
-    newCatName: '',
+    catDraftLabels: emptyLangMap(),
+    editingCategory: null,
+    editCatLabels: emptyLangMap(),
     loading: true,
   };
+
+  function emptyLangMap() {
+    const o = {};
+    LANGS.forEach((l) => { o[l.code] = ''; });
+    return o;
+  }
 
   const $topbar = document.getElementById('topbar');
   const $content = document.getElementById('content');
@@ -96,14 +104,22 @@
   }
 
   function emptyContent() {
-    const c = {};
-    LANGS.forEach((l) => { c[l.code] = ''; });
-    return c;
+    return emptyLangMap();
+  }
+
+  /** Best available display name for a project: given lang, else DE, else whatever's there. */
+  function projectName(p, lang) {
+    if (!p || !p.name) return '';
+    if (typeof p.name === 'string') return p.name;
+    return p.name[lang] || p.name.de || Object.values(p.name).find(Boolean) || '';
   }
 
   function openEditor(project) {
     const draft = JSON.parse(JSON.stringify(project));
     draft.content = Object.assign(emptyContent(), draft.content || {});
+    draft.name = typeof draft.name === 'string'
+      ? Object.assign(emptyLangMap(), { de: draft.name })
+      : Object.assign(emptyLangMap(), draft.name || {});
     state.draft = draft;
     state.draftLang = 'de';
     state.view = 'editor';
@@ -114,7 +130,7 @@
     state.draft = {
       id: null,
       category: state.categories[0] ? state.categories[0].slug : '',
-      name: '', location: '', area: '', year: '',
+      name: emptyLangMap(), location: '', area: '', year: '',
       active: true, images: [], content: emptyContent(),
     };
     state.draftLang = 'de';
@@ -133,10 +149,17 @@
     if (el && state.draft) state.draft.content[state.draftLang] = el.innerHTML;
   }
 
+  function syncNameIntoDraft() {
+    const el = document.getElementById('f-name');
+    if (el && state.draft) state.draft.name[state.draftLang] = el.value;
+  }
+
   async function saveDraft() {
     syncEditableIntoDraft();
+    syncNameIntoDraft();
     const d = state.draft;
     if (!d.category) { toast('Lütfen bir kategori seçin.'); return; }
+    if (!d.name.de.trim()) { toast('Lütfen en azından Almanca proje adını girin.'); return; }
     try {
       await api('save_project', { body: { project: d } });
       toast('Proje kaydedildi.');
@@ -195,16 +218,44 @@
   }
 
   async function addCategory() {
-    const name = state.newCatName.trim();
-    if (!name) return;
+    if (!state.catDraftLabels.de.trim()) { toast('Lütfen en azından Almanca adı girin.'); return; }
     try {
-      await api('save_category', { body: { name } });
-      state.newCatName = '';
+      await api('save_category', { body: { labels: state.catDraftLabels } });
+      state.catDraftLabels = emptyLangMap();
       await loadAll();
       state.view = 'categories';
       render();
     } catch (e) {
       toast('Eklenemedi: ' + e.message);
+    }
+  }
+
+  function startEditCategory(slug) {
+    const c = state.categories.find((x) => x.slug === slug);
+    if (!c) return;
+    state.editingCategory = slug;
+    state.editCatLabels = Object.assign(emptyLangMap(), c.labels || { de: c.label });
+    render();
+  }
+
+  function cancelEditCategory() {
+    state.editingCategory = null;
+    render();
+  }
+
+  async function saveEditCategory() {
+    const slug = state.editingCategory;
+    const labels = state.editCatLabels;
+    if (!labels.de.trim()) { toast('Lütfen en azından Almanca adı girin.'); return; }
+    try {
+      await api('save_category', { body: { slug, labels } });
+      state.editingCategory = null;
+      toast('Kategori güncellendi.');
+      await loadAll();
+      state.view = 'categories';
+      render();
+    } catch (e) {
+      toast('Güncellenemedi: ' + e.message);
     }
   }
 
@@ -243,7 +294,7 @@
     const q = state.query.trim().toLowerCase();
     return state.projects.filter((p) =>
       (state.filter === 'all' || p.category === state.filter) &&
-      (!q || p.name.toLowerCase().includes(q) || p.location.toLowerCase().includes(q))
+      (!q || projectName(p, 'de').toLowerCase().includes(q) || p.location.toLowerCase().includes(q))
     );
   }
 
@@ -268,7 +319,7 @@
       <div class="table-row" data-action="open-project" data-id="${p.id}">
         <div class="row-name">
           <div class="row-thumb">${p.images && p.images[0] ? `<img src="../${esc(p.images[0])}" alt="">` : '<span class="icon">image</span>'}</div>
-          <span class="title">${esc(p.name)}</span>
+          <span class="title">${esc(projectName(p, 'de'))}</span>
         </div>
         <span class="cat-pill" style="color:${categoryColor(p.category)};">${esc(categoryLabel(p.category))}</span>
         <span class="cell-meta">${esc(p.location)}</span>
@@ -306,7 +357,7 @@
 
   function renderEditor() {
     const d = state.draft;
-    const title = d.name && d.name.trim() ? d.name : 'Yeni Proje';
+    const title = projectName(d, state.draftLang) || 'Yeni Proje';
     $topbar.innerHTML = `
       <button class="back-btn" data-action="cancel-edit"><span class="icon" style="font-size:20px;">arrow_back</span> Projeler</button>
       <div style="flex:1;font-family:'Cormorant Garamond',serif;font-size:22px;font-weight:600;white-space:nowrap;overflow:hidden;text-overflow:ellipsis;">${esc(title)}</div>
@@ -333,6 +384,7 @@
     ].map((b) => `<button class="rt-btn" type="button" title="${b.title}" data-action="rt-cmd" data-cmd="${b.cmd}"><span class="icon">${b.icon}</span></button>`).join('');
 
     const langTabs = LANGS.map((l) => `<button class="lang-tab${state.draftLang === l.code ? ' on' : ''}" data-action="lang-tab" data-lang="${l.code}">${l.label}</button>`).join('');
+    const draftLangLabel = (LANGS.find((l) => l.code === state.draftLang) || {}).label || '';
 
     const catOptions = state.categories.map((c) => `<option value="${esc(c.slug)}" ${c.slug === d.category ? 'selected' : ''}>${esc(c.label)}</option>`).join('');
 
@@ -340,10 +392,6 @@
       <div class="wrap-editor">
         <div class="editor-col">
           <div class="card panel">
-            <label class="field">
-              <span class="field-label">Proje Adı</span>
-              <input type="text" id="f-name" placeholder="Örn. LVM Versicherungsbüro" value="${esc(d.name)}">
-            </label>
             <div class="field-grid">
               <label class="field small"><span class="field-label">Konum</span><input type="text" id="f-location" placeholder="Berlin" value="${esc(d.location)}"></label>
               <label class="field small"><span class="field-label">Alan (m²)</span><input type="text" inputmode="numeric" id="f-area" placeholder="200" value="${esc(d.area)}"></label>
@@ -369,8 +417,14 @@
           </div>
 
           <div class="card" style="overflow:hidden;">
-            <div style="padding:18px 24px 0;"><div class="panel-title">İçerik</div></div>
+            <div style="padding:18px 24px 0;"><div class="panel-title">Başlık ve İçerik</div></div>
             <div class="lang-tabs">${langTabs}</div>
+            <div style="padding:16px 24px 0;">
+              <label class="field">
+                <span class="field-label">Proje Adı (${esc(draftLangLabel)})</span>
+                <input type="text" id="f-name" placeholder="Örn. LVM Versicherungsbüro" value="${esc(d.name[state.draftLang] || '')}">
+              </label>
+            </div>
             <div class="rt-toolbar">${rtButtons}</div>
             <div contenteditable="true" class="rt-editable" id="rt-editable" data-ph="Proje açıklamasını buraya yazın…"></div>
           </div>
@@ -402,12 +456,13 @@
     const editable = document.getElementById('rt-editable');
     editable.innerHTML = d.content[state.draftLang] || '';
 
-    ['f-name', 'f-location', 'f-area', 'f-year'].forEach((id) => {
+    ['f-location', 'f-area', 'f-year'].forEach((id) => {
       document.getElementById(id).addEventListener('input', (e) => {
         const key = id.slice(2);
         d[key] = e.target.value;
       });
     });
+    document.getElementById('f-name').addEventListener('input', (e) => { d.name[state.draftLang] = e.target.value; });
     document.getElementById('f-category').addEventListener('change', (e) => { d.category = e.target.value; });
 
     const galleryAdd = document.getElementById('gallery-add');
@@ -431,9 +486,28 @@
       </div>
     `;
 
+    const langFields = (idPrefix, values) => LANGS.map((l) => `
+      <label class="field small">
+        <span class="field-label">${l.label}</span>
+        <input type="text" id="${idPrefix}-${l.code}" placeholder="${l.label}" value="${esc(values[l.code] || '')}">
+      </label>
+    `).join('');
+
     const rows = state.categories.map((c) => {
       const n = state.projects.filter((p) => p.category === c.slug).length;
       const inUse = n > 0;
+
+      if (state.editingCategory === c.slug) {
+        return `
+          <div class="cat-row cat-row-edit">
+            <span class="cat-icon"><span class="icon">sell</span></span>
+            <div class="cat-add-lang-grid" style="flex:1;">${langFields('edit-cat', state.editCatLabels)}</div>
+            <button class="btn btn-outline" data-action="cancel-edit-category">İptal</button>
+            <button class="btn btn-dark" data-action="save-edit-category">Kaydet</button>
+          </div>
+        `;
+      }
+
       return `
         <div class="cat-row">
           <span class="cat-icon"><span class="icon">sell</span></span>
@@ -441,6 +515,9 @@
             <div class="cat-name">${esc(c.label)}</div>
             <div class="cat-usage">${n} proje</div>
           </div>
+          <button class="cat-edit" data-action="edit-category" data-slug="${esc(c.slug)}" title="Kategoriyi düzenle">
+            <span class="icon" style="font-size:18px;">edit</span>
+          </button>
           <button class="cat-remove" data-action="remove-category" data-slug="${esc(c.slug)}" ${inUse ? 'disabled' : ''} title="${inUse ? 'Kullanımda olan kategori silinemez' : 'Kategoriyi sil'}">
             <span class="icon" style="font-size:18px;">delete</span>
           </button>
@@ -451,16 +528,20 @@
     $content.innerHTML = `
       <div class="wrap-cats">
         <div class="card cat-add-row">
-          <input type="text" id="new-cat-input" placeholder="Yeni kategori adı (örn. Gastronomie)" value="${esc(state.newCatName)}">
-          <button class="btn btn-dark" data-action="add-category"><span class="icon" style="font-size:18px;">add</span> Ekle</button>
+          <div class="panel-hint" style="margin-bottom:2px;">Her dil için kategori adını girin (en azından Almanca gerekli)</div>
+          <div class="cat-add-lang-grid">${langFields('new-cat', state.catDraftLabels)}</div>
+          <button class="btn btn-dark" style="align-self:flex-start;" data-action="add-category"><span class="icon" style="font-size:18px;">add</span> Ekle</button>
         </div>
         <div class="card">${rows}</div>
       </div>
     `;
 
-    const input = document.getElementById('new-cat-input');
-    input.addEventListener('input', (e) => { state.newCatName = e.target.value; });
-    input.addEventListener('keydown', (e) => { if (e.key === 'Enter') addCategory(); });
+    LANGS.forEach((l) => {
+      const newInput = document.getElementById('new-cat-' + l.code);
+      if (newInput) newInput.addEventListener('input', (e) => { state.catDraftLabels[l.code] = e.target.value; });
+      const editInput = document.getElementById('edit-cat-' + l.code);
+      if (editInput) editInput.addEventListener('input', (e) => { state.editCatLabels[l.code] = e.target.value; });
+    });
   }
 
   /* ---------- event delegation ---------- */
@@ -500,6 +581,7 @@
       case 'remove-image': removeImage(Number(target.dataset.idx)); break;
       case 'lang-tab':
         syncEditableIntoDraft();
+        syncNameIntoDraft();
         state.draftLang = target.dataset.lang;
         renderEditor();
         break;
@@ -512,6 +594,9 @@
         break;
       }
       case 'add-category': addCategory(); break;
+      case 'edit-category': startEditCategory(target.dataset.slug); break;
+      case 'cancel-edit-category': cancelEditCategory(); break;
+      case 'save-edit-category': saveEditCategory(); break;
       case 'remove-category':
         if (target.disabled) break;
         removeCategory(target.dataset.slug);
