@@ -1,0 +1,240 @@
+[
+    {
+        "id": 6,
+        "category": "office",
+        "name": "LVM Versicherungsbüro",
+        "location": "Berlin",
+        "area": "200",
+        "year": "2020",
+        "active": true,
+        "images": [
+            "images/uploads/LVM-1.jpeg",
+            "images/uploads/LVM-2.jpeg",
+            "images/uploads/LVM-3.jpeg"
+        ],
+        "content": {
+            "de": "<p>Das LVM Versicherungsbüro in Berlin wurde auf 200 m² als helles, strukturiertes Arbeitsumfeld konzipiert, das Konzentration und kollegialen Austausch fördert. Großzügige Glasfronten maximieren den natürlichen Lichteinfall, modulare Arbeitsstationen aus maßgefertigten Einbauelementen bieten flexible Nutzung ohne gestalterische Kompromisse. Das konsequent helle Farbkonzept verleiht dem Raum Leichtigkeit und Weite, auch wenn der Grundriss begrenzt ist. Jede Arbeitsfläche, Regalwand und Trennwand wurde in Material und Proportion auf den spezifischen Grundriss abgestimmt und in eigener Fertigung produziert. Funktionale Klarheit und repräsentative Qualität schließen sich in diesem Projekt gegenseitig nicht aus, sondern verstärken einander.</p>",
+            "en": "<p>The LVM insurance office in Berlin was conceived across 200 m² as a light, structured work environment that promotes both concentration and collegial exchange. Generous glass fronts maximise natural light, while modular workstations from custom built-in elements offer flexible use without design compromises. The consistently light colour scheme gives the space a sense of lightness and openness even within a compact footprint. Every work surface, shelving wall and partition was matched in material and proportion to the specific floorplan and produced in-house. Functional clarity and representative quality do not contradict each other in this project, but rather reinforce one another.</p>",
+            "tr": "<p>Berlin'deki LVM Versicherungsbüro, 200 m²'de konsantrasyon ve ekip iletişimini teşvik eden aydınlık ve yapılandırılmış bir çalışma ortamı olarak tasarlandı. Özel yerleşik elemanlardan oluşan modüler iş istasyonları esnek kullanım sağlıyor. Her yüzey ve bölücü, mekanın özel planına göre üretildi.</p>",
+            "ru": "<p>Офис LVM в Берлине спроектирован на 200 м² как светлая, структурированная рабочая среда. Модульные рабочие места из встроенных элементов обеспечивают гибкое использование. Каждая поверхность и перегородка подобрана под конкретную планировку и произведена на нашем предприятии.</p>",
+            "ar": "<p>صُمِّم مكتب LVM في برلين على مساحة 200 م² كبيئة عمل مضيئة ومنظّمة. محطات العمل المعيارية من عناصر مدمجة توفّر استخداماً مرناً. كل سطح وفاصل مطابق للمسقط المحدد ومنتج في مصنعنا.</p>"
+        }
+    },
+    {
+        "id": 5,
+        "category": "office",
+        "name": "Signal Iduna Versicherungsbüro",
+        "location": "Berlin-Charlottenburg",
+        "area": "400",
+        "year": "2025",
+        "active": true,
+        "images": [
+            "images/uploads/SIGNAL-IDUNA-1.jpeg",
+            "images/uploads/SIGNAL-IDUNA-2.jpeg",
+            "images/uploads/SIGNAL-IDUNA-3.jpeg",
+            "images/uploads/SIGNAL-IDUNA-4.jpeg",
+            "images/uploads/SIGNAL-IDUNA-5.jpeg",
+            "images/uploads/SIGNAL-IDUNA-6.jpeg",
+            "images/uploads/SIGNAL-IDUNA-7.jpeg",
+            "images/uploads/SIGNAL-IDUNA-8.jpeg",
+            "images/uploads/SIGNAL-IDUNA-9.jpeg",
+            "images/uploads/SIGNAL-IDUNA-10.jpeg",
+            "images/uploads/SIGNAL-IDUNA-11.jpeg",
+            "images/uploads/SIGNAL-IDUNA-12.jpeg",
+            "images/uploads/SIGNAL-IDUNA-13.jpeg",
+            "images/uploads/SIGNAL-IDUNA-14.jpeg",
+            "images/uploads/SIGNAL-IDUNA-15.jpeg",
+            "images/uploads/SIGNAL-IDUNA-16.jpeg"
+        ],
+        "content": {
+            "de": "<p>Das Signal Iduna Versicherungsbüro in Berlin-Charlottenburg ist ein Beispiel dafür, wie gewerbliche Büroeinrichtung Professionalität und Nahbarkeit gleichermaßen vermitteln kann. Ein Empfangstresen aus weißem Naturstein setzt den ersten Eindruck, maßgefertigte Loungemöbel, zurückhaltende Begrünung und präzise gesetzte Lichtpunkte schaffen eine Empfangsatmosphäre, die Kunden willkommen heißt. Glaspartitionen strukturieren den 400 m² großen Grundriss ohne Tageslicht oder Transparenz zu opfern. Jede Arbeitszone wurde im Hinblick auf Konzentration, Kommunikation und repräsentative Außenwirkung geplant. Alle Möbel und Einbauten wurden nach Maß produziert und passgenau montiert. Das Ergebnis ist ein Büro, das von Vertrauen und Qualität erzählt, ohne diese Werte explizit zu benennen.</p>",
+            "en": "<p>The Signal Iduna insurance office in Berlin-Charlottenburg demonstrates how commercial office interiors can communicate professionalism and approachability in equal measure. A reception desk in white natural stone sets the first impression, while custom lounge furniture, restrained greenery and precisely placed lighting create a welcoming atmosphere for clients. Glass partitions structure the 400 m² floorplan without sacrificing daylight or transparency. Each work zone was planned with concentration, communication and representative appearance in mind. All furniture and built-in elements were produced to measure and installed with precision. The result is an office that speaks of trust and quality without stating these values explicitly.</p>",
+            "tr": "<p>Berlin-Charlottenburg'daki Signal Iduna Versicherungsbüro, ticari ofis tasarımının profesyonellik ve sıcaklığı aynı anda nasıl iletebileceğini gösteriyor. 400 m²'de cam bölmeler gün ışığını korurken mekanı düzenliyor. Tüm mobilya ve yerleşik elemanlar ölçüye göre üretildi.</p>",
+            "ru": "<p>Страховой офис Signal Iduna в Берлин-Шарлоттенбурге демонстрирует, как коммерческое офисное пространство может одновременно транслировать профессионализм и доступность. На 400 м² стеклянные перегородки структурируют план, не жертвуя светом. Вся мебель изготовлена на заказ.</p>",
+            "ar": "<p>يُبيّن مكتب التأمين Signal Iduna في برلين-شارلوتنبورغ كيف يمكن للتصميم التجاري أن ينقل المهنية والترحيب في آنٍ واحد. على 400 م²، تُنظّم الفواصل الزجاجية المسقط الأفقي دون التضحية بالضوء. جميع الأثاث والعناصر المدمجة مصنوعة حسب المقاس.</p>"
+        }
+    },
+    {
+        "id": 10,
+        "category": "werkstatt",
+        "name": "Reifen Bestellung 24",
+        "location": "Deutschland",
+        "area": "250",
+        "year": "2026",
+        "active": true,
+        "images": [
+            "images/autowerkstatt/reifen-1.jpeg",
+            "images/autowerkstatt/reifen-2.jpeg",
+            "images/autowerkstatt/reifen-3.jpeg",
+            "images/autowerkstatt/reifen-4.jpeg",
+            "images/autowerkstatt/reifen-5.jpeg",
+            "images/autowerkstatt/reifen-6.jpeg"
+        ],
+        "content": {
+            "de": "<p>Reifen Bestellung 24 ist ein Projekt, das zeigt, wie ein modernes Kfz-Servicebetrieb eine souveräne räumliche Identität entwickeln kann. Auf rund 250 m² wurden Werkstattbereich, Kundenempfang und Leitungsbüro zu einem gestalterisch durchgängigen Gesamtkonzept zusammengeführt. Eine neu eingezogene Galerie über dem Werkstattboden schafft Raum für ein verglastes Managementbüro mit direktem Sichtbezug zur Arbeitsfläche — Transparenz als architektonisches Prinzip, das Vertrauen und Professionalität gleichermaßen kommuniziert. Der Empfangsbereich verbindet eine hochwertige Lounge-Atmosphäre mit funktionalen Beratungsarbeitsplätzen, während der Wartebereich mit Panoramaverglasung zur Straße und komfortabler Möblierung eine Aufenthaltsqualität schafft, die in dieser Branche selten ist. Dunkle Holztöne, lineare Lichtführung und präzise Einbauten prägen eine Identität, die Premiumanspruch und Funktionalität klar benennt.</p>",
+            "en": "<p>Reifen Bestellung 24 demonstrates how a modern tyre service operation can develop a confident spatial identity. Across approximately 250 m², the workshop floor, customer reception and management office have been united into a single coherent design concept. A newly introduced mezzanine above the workshop creates space for a glazed management office with a direct sightline to the work floor — transparency as an architectural principle that communicates trust and professionalism in equal measure. The reception area combines a high-quality lounge atmosphere with functional consultation workstations, while the waiting zone, with its panoramic glazing to the street and quality furnishings, delivers a level of comfort rarely found in this sector. Dark wood tones, linear lighting and precise built-ins define an identity that clearly signals premium standards and operational rigour.</p>",
+            "tr": "<p>Reifen Bestellung 24, modern bir lastik servis işletmesinin güçlü bir mekansal kimlik oluşturabileceğini gösteren bir proje. Yaklaşık 250 m²'de atölye alanı, müşteri resepsiyonu ve yönetim ofisi tasarımsal olarak tek bir bütüne dönüştürüldü. Atölye tabanının üzerinde yeni inşa edilen asma kat, doğrudan çalışma alanına bakan camlı bir yönetim ofisine ev sahipliği yapıyor. Resepsiyon, kaliteli lounge atmosferiyle işlevsel danışma alanlarını bir araya getirirken bekleme bölgesi, sokağa bakan panoramik cam ve konforlu mobilyayla bu sektörde ender rastlanan bir kalite sunuyor. Koyu ahşap tonları, lineer aydınlatma ve özel üretim mobilyalar premium duruşu net biçimde ortaya koyuyor.</p>",
+            "ru": "<p>Reifen Bestellung 24 — проект, демонстрирующий, как современный шиномонтажный сервис может обрести уверенную пространственную идентичность. На 250 м² зона мастерской, клиентская рецепция и офис руководства объединены в единую дизайн-концепцию. Встроенная галерея над полом мастерской создаёт застеклённый управленческий офис с прямым видом на рабочую зону. Зона рецепции сочетает высококачественную лаунж-атмосферу с функциональными рабочими местами для консультаций, а зона ожидания с панорамным остеклением предлагает уровень комфорта, редкий в этой отрасли. Тёмные деревянные тона, линейное освещение и точные встроенные элементы формируют идентичность премиального уровня.</p>",
+            "ar": "<p>يُجسّد مشروع Reifen Bestellung 24 كيف يمكن لخدمة إطارات حديثة أن تطوّر هوية مكانية راسخة. على نحو 250 م²، تم دمج منطقة الورشة وصالة الاستقبال ومكتب الإدارة في مفهوم تصميمي متكامل. أُضيف طابق وسيط فوق أرضية الورشة يضم مكتباً زجاجياً للإدارة مع إطلالة مباشرة على منطقة العمل. تجمع منطقة الاستقبال بين أجواء اللاونج الراقية ومحطات استشارة وظيفية، بينما تُوفّر منطقة الانتظار بزجاجها البانورامي على الشارع وأثاثها الفاخر مستوى من الراحة نادراً ما يُوجد في هذا القطاع. الأخشاب الداكنة والإضاءة الخطية والعناصر المدمجة المصنوعة بدقة تُعرّف هوية تعكس المعايير المتميزة.</p>"
+        }
+    },
+    {
+        "id": 1,
+        "category": "gastro",
+        "name": "L'Adresse Shisha Club & Bar",
+        "location": "Berlin",
+        "area": "480",
+        "year": "2025",
+        "active": true,
+        "images": [
+            "images/uploads/Ladresse-1.jpeg",
+            "images/uploads/Ladresse-2.jpeg",
+            "images/uploads/Ladresse-3.jpeg",
+            "images/uploads/Ladresse-4.jpeg"
+        ],
+        "content": {
+            "de": "<p>L'Adresse Shisha Club & Bar in Berlin ist eines der anspruchsvollsten Gastronomieeinrichtungsprojekte in unserem Portfolio. Raumhohe Regalsysteme aus dunklem Holzfurnier, Polstermöbel in tiefen Grautönen und eine präzise konzipierte Lichtarchitektur schaffen auf 480 m² eine Lounge-Atmosphäre, die hochwertiges Material und dramatische Stimmung zu einem stimmigen Gesamtbild vereint. Bar- und Gastbereiche wurden gestalterisch eng miteinander verbunden, bleiben funktional aber klar voneinander getrennt. Jede Oberfläche wurde auf Langlebigkeit, Reinigungsfreundlichkeit und Haptik geprüft, da im Gastronomiebetrieb ästhetischer Anspruch und alltägliche Belastbarkeit gleichermaßen zählen. Alle Einbauten entstanden in eigener Fertigung.</p>",
+            "en": "<p>L'Adresse Shisha Club & Bar in Berlin is one of the most sophisticated hospitality projects in our portfolio. Floor-to-ceiling shelving in dark wood veneer, upholstered seating in deep grey tones and a precisely designed lighting architecture create a lounge atmosphere across 480 m² that unites premium material with dramatic mood in a cohesive whole. Bar and guest areas were closely connected visually while remaining clearly distinct in function. Every surface was evaluated for durability, ease of maintenance and tactility, since aesthetic quality and operational resilience are equally important in hospitality. All built-in elements were produced in-house.</p>",
+            "tr": "<p>Berlin'deki L'Adresse Shisha Club & Bar, portföyümüzdeki en iddialı gastronomi projelerinden biri. 480 m²'de koyu ahşap kaplamalı yüksek raf sistemleri, derin gri tonlarda döşemeli mobilyalar ve özenle tasarlanmış ışık mimarisi, kaliteli malzeme ile dramatik atmosferi bir araya getiriyor. Tüm mobilyalar kendi üretimimizde üretildi.</p>",
+            "ru": "<p>L'Adresse Shisha Club & Bar в Берлине — один из самых требовательных ресторанных проектов в нашем портфолио. На 480 м² стеллажи в тёмном шпоне, мягкая мебель в глубоких серых тонах и продуманная световая архитектура создают лаундж-атмосферу высокого класса. Все элементы изготовлены в нашем производстве.</p>",
+            "ar": "<p>يُعدّ L'Adresse Shisha Club & Bar في برلين من أكثر مشاريع الضيافة تطلباً في محفظتنا. على 480 م²، تخلق أنظمة الرفوف الشاهقة بخشب داكن والمقاعد المبطّنة وهندسة الإضاءة المدروسة أجواء لاونج راقية. جميع العناصر المدمجة من إنتاجنا الخاص.</p>"
+        }
+    },
+    {
+        "id": 8,
+        "category": "gastro",
+        "name": "Eleganza Cafe",
+        "location": "Berlin, Unter den Linden",
+        "area": "75",
+        "year": "2023",
+        "active": true,
+        "images": [
+            "images/uploads/Eleganze-Cafe-1.jpeg",
+            "images/uploads/Eleganze-Cafe-2.jpeg",
+            "images/uploads/Eleganze-Cafe-3.jpeg",
+            "images/uploads/Eleganze-Cafe-4.jpeg"
+        ],
+        "content": {
+            "de": "<p>Das Eleganza Cafe am Berliner Unter den Linden beweist, dass Kleinfläche und großer gestalterischer Auftritt kein Widerspruch sind. Gewölbte Archdetails als strukturgebendes Element verleihen dem Raum eine architektonische Tiefe, die weit über das Maß der tatsächlichen Fläche hinausgeht. Eine mit Terrazzo verkleidete Theke, goldtonige Armaturen und warme Materialien schaffen auf 75 m² eine mediterrane Wärme, die Gäste sofort einlädt. Maßgefertigte Lichtmodule inszenieren die Regalarchitektur als dekoratives Kernstück des Interieurs und setzen Produkte wie Kunst in Szene. Alle Einbauten wurden passgenau produziert und montiert, sämtliche Materialien auf Café-Betrieb, Pflegeleichtigkeit und langfristige Ästhetik hin ausgewählt.</p>",
+            "en": "<p>Eleganza Cafe on Berlins Unter den Linden proves that compact scale and strong design presence are not contradictions. Arched architectural details as the structural leitmotif give the space an architectural depth far exceeding the actual floor area. A terrazzo-clad counter, gold-toned fixtures and warm materials create a Mediterranean warmth across 75 m² that immediately invites guests in. Custom lighting modules stage the shelving architecture as the decorative centrepiece of the interior, presenting products as works of art. All built-ins were produced to measure and installed precisely, every material selected for café operation, ease of maintenance and long-term aesthetic integrity.</p>",
+            "tr": "<p>Berlin Unter den Linden'deki Eleganza Cafe, küçük alanın büyük tasarım etkisiyle çelişmediğini kanıtlıyor. Kemer detayları mekanı aşan bir mimari derinlik katıyor; terrazzo kaplı tezgah, altın tonlu armatürler ve sıcak malzemeler 75 m²'de Akdeniz sıcaklığı yaratıyor. Tüm aydınlatma modülleri özel üretim.</p>",
+            "ru": "<p>Eleganza Cafe на берлинском Унтер-ден-Линден доказывает: компактный масштаб и сильное дизайнерское присутствие не противоречат друг другу. Арочные детали придают пространству архитектурную глубину, а стойка из террацо, золотистые светильники и тёплые материалы создают средиземноморское тепло на 75 м². Все световые модули — собственного производства.</p>",
+            "ar": "<p>يُثبت Eleganza Cafe في برلين على شارع أونتر دن ليندن أن الحجم الصغير والحضور التصميمي القوي لا يتناقضان. تفاصيل الأقواس تمنح الفضاء عمقاً معمارياً، فيما تخلق الكاونتر الترازو والتجهيزات الذهبية والمواد الدافئة دفء البحر الأبيض على 75 م². جميع وحدات الإضاءة من إنتاجنا.</p>"
+        }
+    },
+    {
+        "id": 4,
+        "category": "gastro",
+        "name": "Sour & Sweet Berlin",
+        "location": "Berlin",
+        "area": "650",
+        "year": "2025",
+        "active": true,
+        "images": [
+            "images/uploads/Sour-and-Sweet-Berlin-1.jpeg",
+            "images/uploads/Sour-and-Sweet-Berlin-2.jpeg",
+            "images/uploads/Sour-and-Sweet-Berlin-3.jpeg",
+            "images/uploads/Sour-and-Sweet-Berlin-4.jpeg",
+            "images/uploads/Sour-and-Sweet-Berlin-5.jpg",
+            "images/uploads/Sour-and-Sweet-Berlin-6.jpg",
+            "images/uploads/Sour-and-Sweet-Berlin-7.jpg"
+        ],
+        "content": {
+            "de": "<p>Sour & Sweet Berlin ist mit 650 m² eines der flächenmäßig größten Projekte in unserem Portfolio und zeigt, wie konsequent eine Markenidentität in Architektur und Einrichtung übersetzt werden kann. Warme Materialien, handwerkliche Oberflächen und ein sorgfältig gestalteter räumlicher Übergang zwischen dem öffentlichen Café-Bereich und der einsehbaren Backstube kommunizieren Transparenz und Authentizität. Maßgefertigte Einbauten gliedern die Fläche in klar erkennbare Zonen, ein kohärentes Beleuchtungskonzept verbindet sie gestalterisch zu einem stimmigen Ganzen. Jede Oberfläche und jeder Möbelkörper wurde in enger Abstimmung mit dem Auftraggeber entwickelt und in eigener Fertigung realisiert. Die durchdachte Wegführung macht den Besuch zur räumlichen Erfahrung.</p>",
+            "en": "<p>Sour & Sweet Berlin is, at 650 m², one of the largest projects by area in our portfolio and demonstrates how consistently a brand identity can be translated into architecture and interior design. Warm materials, artisanal surfaces and a carefully designed spatial transition between the public café area and the visible bakery production communicate transparency and authenticity. Custom-built elements structure the space into clearly recognisable zones, while a cohesive lighting concept connects them into a harmonious whole. Every surface and furniture piece was developed in close coordination with the client and realised in-house. The considered flow makes each visit a spatial experience.</p>",
+            "tr": "<p>650 m²'lik Sour & Sweet Berlin, portföyümüzdeki en büyük projelerden biri ve bir marka kimliğinin mimari ve tasarıma ne kadar tutarlı biçimde yansıtılabileceğini gösteriyor. Özel üretim mobilyalar mekanı net bölgelere ayırıyor, tutarlı bir aydınlatma konsepti ise bütünü bir araya getiriyor. Her detay müşteriyle yakın koordinasyonla geliştirildi.</p>",
+            "ru": "<p>Sour & Sweet Berlin — один из крупнейших проектов нашего портфолио площадью 650 м², демонстрирующий, как последовательно идентичность бренда может быть воплощена в архитектуре. Встроенные элементы зонируют пространство, а единая концепция освещения объединяет его в единое целое. Каждая деталь разработана в тесном взаимодействии с клиентом.</p>",
+            "ar": "<p>يُعدّ Sour & Sweet Berlin بمساحة 650 م² من أكبر مشاريعنا، ويُظهر كيف يمكن ترجمة هوية العلامة التجارية بثبات في التصميم. العناصر المدمجة تُقسّم الفضاء إلى مناطق واضحة، فيما يوحّدها مفهوم إضاءة متسق. كل تفصيل طُوّر بتنسيق وثيق مع العميل.</p>"
+        }
+    },
+    {
+        "id": 7,
+        "category": "gastro",
+        "name": "The Meat Steakhouse",
+        "location": "Berlin",
+        "area": "170",
+        "year": "2018",
+        "active": true,
+        "images": [
+            "images/uploads/The-Meat-2.jpeg",
+            "images/uploads/The-Meat-3.jpeg",
+            "images/uploads/The-Meat-4.jpeg",
+            "images/uploads/The-Meat-5.jpeg",
+            "images/uploads/The-Meat-6.jpeg",
+            "images/uploads/The-Meat-7.jpeg"
+        ],
+        "content": {
+            "de": "<p>The Meat Steakhouse in Berlin ist ein Interieur, das aus dem Anspruch entstanden ist, Materialqualität spürbar und nicht nur sichtbar zu machen. Kupferfarbene Pendelleuchten werfen ihr warmes Licht über Natursteinoberflächen und dunkle Eichenholzelemente, handgenähte Lederpolster und rustikales Sichtmauerwerk verstärken die erdige Authentizität des Konzepts. Präzise verarbeitete Holzdetails an Tischen, Bänken und Wandverkleidungen zeigen, dass handwerkliche Qualität auch im intensiven Gastronomiebetrieb dauerhaft standhält. Jede Materialwahl wurde auf langfristige Nutzung ausgerichtet: Oberflächen und Möbel, die mit der Zeit Charakter entwickeln, statt zu veraltern. Alle Einbauten wurden in eigener Fertigung produziert und vor Ort montiert.</p>",
+            "en": "<p>The Meat Steakhouse in Berlin is an interior born from the ambition to make material quality felt, not merely seen. Copper-toned pendants cast warm light across natural stone surfaces and dark oak elements, while hand-stitched leather upholstery and rustic exposed masonry reinforce the earthy authenticity of the concept. Precisely crafted wood details on tables, benches and wall claddings demonstrate that artisanal quality holds its own even under the demands of daily hospitality operation. Every material choice was made with long-term use in mind: surfaces and furniture that develop character over time rather than becoming dated. All built-ins were produced in-house and installed on-site.</p>",
+            "tr": "<p>Berlin'deki The Meat Steakhouse, malzeme kalitesini görünür değil, hissettirilebilir kılma hedefiyle tasarlanmış bir iç mekandır. Bakır tonlu sarkıtlar, doğal taş yüzeylere ve koyu meşe elemanlara sıcak ışık döküyor; el dikişli deri döşemeler ve tuğla doku mekanın özgünlüğünü pekiştiriyor. Tüm mobilyalar özel üretimdir.</p>",
+            "ru": "<p>The Meat Steakhouse в Берлине — интерьер, рождённый из стремления сделать качество материала ощутимым, а не просто видимым. Медные светильники льют тёплый свет на поверхности из натурального камня и тёмного дуба, ручная кожаная обивка и кирпичная кладка усиливают аутентичность. Всё изготовлено на нашем производстве.</p>",
+            "ar": "<p>The Meat Steakhouse في برلين تصميم داخلي وُلد من الطموح لجعل جودة المواد محسوسةً لا مرئيةً فحسب. المصابيح النحاسية تسكب ضوءاً دافئاً على أسطح الحجر الطبيعي والبلوط الداكن، فيما تعزّز الجلود والطابوق المكشوف الأصالة. جميع الأثاث من إنتاجنا.</p>"
+        }
+    },
+    {
+        "id": 9,
+        "category": "fitness",
+        "name": "Elite Kickboxing Studio",
+        "location": "Berlin",
+        "area": "800",
+        "year": "2023",
+        "active": true,
+        "images": [
+            "images/uploads/Elite-1.jpeg",
+            "images/uploads/Elite-2.jpeg",
+            "images/uploads/Elite-3.jpeg",
+            "images/uploads/Elite-4.jpeg"
+        ],
+        "content": {
+            "de": "<p>Das Elite Kickboxing Studio in Berlin definiert auf 800 m² eine Ästhetik des Leistungssports, die weit über übliche Funktionalität hinausgeht. Sichtbeton, metallische Oberflächen und konsequente Geometrie erzeugen eine Atmosphäre, die Intensität und Fokus einfordert, ohne rein zweckorientiert zu wirken. Drei funktionale Zonen, Trainingsbereich, Café und Büro, wurden gestalterisch zu einem kohärenten Gesamtbild verbunden und sind räumlich dennoch klar voneinander getrennt. Die hochwertige Akustikgestaltung und das auf Leistungssport ausgerichtete Beleuchtungskonzept wurden ebenso sorgfältig geplant wie die Möbel und Einbauten. Alle Ausstattungselemente entstanden in eigener Fertigung und wurden auf die besonderen Anforderungen eines intensiv genutzten Sportbetriebs ausgelegt.</p>",
+            "en": "<p>Elite Kickboxing Studio in Berlin redefines the aesthetics of performance sport across 800 m², going far beyond conventional functionality. Exposed concrete, metallic surfaces and consistent geometry create an atmosphere that demands intensity and focus without appearing purely utilitarian. Three functional zones, training area, café and office, have been united into a coherent visual whole while remaining clearly separated in spatial terms. The high-quality acoustic design and performance-sport lighting concept were planned with the same care as the furniture and built-in elements. All fittings were produced in-house and designed to meet the particular demands of an intensively used sporting environment.</p>",
+            "tr": "<p>Berlin'deki Elite Kickboxing Studio, 800 m²'de performans sporunu yeniden tanımlıyor. Çıplak beton, metalik yüzeyler ve tutarlı geometri, yalnızca işlevsel görünmeden yoğunluk ve odak isteyen bir atmosfer yaratıyor. Antrenman alanı, kafe ve ofis olmak üzere üç işlevsel bölge tasarımsal olarak bir bütün oluşturuyor. Tüm donanım özel üretimdir.</p>",
+            "ru": "<p>Elite Kickboxing Studio в Берлине переосмысливает эстетику силового спорта на 800 м². Открытый бетон, металлические поверхности и последовательная геометрия создают атмосферу интенсивности без утилитарности. Три зоны — тренировочная, кафе и офис — объединены в единый визуальный образ. Всё оборудование произведено на нашем предприятии.</p>",
+            "ar": "<p>يُعيد Elite Kickboxing Studio في برلين تعريف جماليات الرياضة على 800 م². الخرسانة المكشوفة والأسطح المعدنية والهندسة المتسقة تخلق أجواءً تستدعي التركيز دون أن تبدو نفعية بحتة. ثلاث مناطق وظيفية، التدريب والمقهى والمكتب، موحّدة في صورة بصرية متكاملة. جميع التجهيزات من إنتاجنا الخاص.</p>"
+        }
+    },
+    {
+        "id": 3,
+        "category": "gastro",
+        "name": "China Box",
+        "location": "Berlin",
+        "area": "150",
+        "year": "2019",
+        "active": true,
+        "images": [
+            "images/uploads/China-Box-1.jpeg",
+            "images/uploads/China-Box-2.jpeg",
+            "images/uploads/China-Box-3.jpeg",
+            "images/uploads/China-Box-4.jpeg"
+        ],
+        "content": {
+            "de": "<p>China Box in Berlin verbindet asiatische Gestaltungssprache mit zeitgemäßem Handwerk auf 150 m². Ornamentierte Wandpaneele aus hellem Massivholz mit geometrischen Mustern rahmen den gesamten Raum und zeigen, wie präzise Detailarbeit eine klare Identität erzeugt. Kugelförmige Pendelleuchten in Weiß tauchen die Eichentische und cremefarbenen Polsterstühle in ein gleichmäßig warmes Licht, das Behaglichkeit und Konzentration zugleich schafft. Die Deckengestaltung mit traditionell anmutenden ornamentalen Elementen wird in den Wandpaneelen aufgegriffen und schafft so ein durchgehendes gestalterisches Thema. Alle Einbauten wurden in eigener Produktion gefertigt, sämtliche Oberflächen auf gastronomische Belastbarkeit hin ausgewählt und vor Ort präzise montiert.</p>",
+            "en": "<p>China Box in Berlin unites Asian design language with contemporary craftsmanship across 150 m². Ornamental wall panels in light solid wood with geometric patterns frame the entire space and show how precise detail work creates a clear identity. White globe pendants bathe oak tables and cream upholstered chairs in warm, even light that creates comfort and concentration simultaneously. The ceiling design with traditionally inspired ornamental elements is echoed in the wall panels, creating a consistent visual theme throughout. All built-ins were produced in-house, all surfaces selected for their suitability for daily hospitality use, and everything installed on-site with precision.</p>",
+            "tr": "<p>Berlin'deki China Box, 150 m²'de Asya tasarım dilini çağdaş zanaatla buluşturuyor. Geometrik motifli açık masif ahşap duvar panelleri, mekanın çerçevesini oluştururken net bir kimlik yaratıyor. Tüm mobilyalar özel üretim, tüm yüzeyler gastronomi kullanımı için seçildi.</p>",
+            "ru": "<p>China Box в Берлине объединяет азиатский язык дизайна с современным мастерством на 150 м². Орнаментальные стеновые панели из светлой массивной древесины с геометрическим рисунком задают характер пространства. Вся мебель — собственного производства, все поверхности — для интенсивного ресторанного использования.</p>",
+            "ar": "<p>تجمع China Box في برلين لغة التصميم الآسيوي مع الحرفية المعاصرة على 150 م². ألواح الجدران الخشبية المزخرفة بنقوش هندسية تمنح الفضاء هويةً واضحة. جميع الأثاث من إنتاجنا الخاص، وجميع الأسطح مختارة للاستخدام اليومي.</p>"
+        }
+    },
+    {
+        "id": 11,
+        "category": "gastro",
+        "name": "Zeki Lounge",
+        "location": "Leipzig",
+        "area": "175",
+        "year": "2022",
+        "active": true,
+        "images": [
+            "images/uploads/Zeki-Lounge-1.jpeg",
+            "images/uploads/Zeki-Lounge-2.jpeg",
+            "images/uploads/Zeki-Lounge-3.jpeg",
+            "images/uploads/Zeki-Lounge-4.jpeg"
+        ],
+        "content": {
+            "de": "<p>Die Zeki Lounge in Leipzig entstand als sorgfältig komponierter Gastraum, in dem jedes Material eine bewusste Entscheidung trägt. Schwarzer Marmor als umlaufender Wandakzent, eine runde Tischanlage aus dunklem Nussholz und ringförmige Designerleuchten fügen sich zu einer Atmosphäre zusammen, die Ruhe und Präsenz verbindet. Auf 175 m² wurden sämtliche Möbel in eigener Fertigung maßgeschneidert und vor Ort mit höchster Sorgfalt montiert. Jede Oberfläche, jede Verbindung und jedes Detail wurde auf Dauerhaftigkeit und Haptik abgestimmt. Das Ergebnis ist ein Gastraum, der Qualität nicht behauptet, sondern zeigt.</p>",
+            "en": "<p>The Zeki Lounge in Leipzig was conceived as a carefully composed restaurant interior in which every material carries a deliberate decision. Black marble as a continuous wall accent, a circular dark walnut dining arrangement and ring-shaped designer pendants combine to form an atmosphere that unites calm and presence. Across 175 m², all furniture was custom-manufactured in-house and installed on-site with precision. Every surface, every joint and every detail was selected for longevity and tactility. The result is a restaurant space that does not claim quality, but demonstrates it.</p>",
+            "tr": "<p>Leipzig'teki Zeki Lounge, her malzemenin bilinçli bir karar taşıdığı titizlikle tasarlanmış bir mekan olarak hayata geçti. Siyah mermer duvar aksanları, koyu ceviz yuvarlak masa düzeni ve halka şeklindeki aydınlatmalar, sakinlik ve güçlü bir atmosferi bir araya getiriyor. 175 m²'lik bu alanda tüm mobilyalar özel olarak üretildi ve yerinde hassasiyetle monte edildi.</p>",
+            "ru": "<p>Lounge Zeki в Лейпциге создан как тщательно выверенный ресторанный интерьер, в котором каждый материал несёт осознанное решение. Чёрный мрамор в качестве настенного акцента, круглый обеденный ансамбль из тёмного ореха и кольцеобразные светильники формируют атмосферу, объединяющую спокойствие и присутствие. На 175 м² вся мебель изготовлена на заказ и установлена с высочайшей точностью.</p>",
+            "ar": "<p>تأسّس Zeki Lounge في لايبزيغ كفضاء مطعم مصمّم بعناية، حيث تحمل كل مادة قراراً واعياً. رخام أسود كلمسة جدارية متصلة، طاولة دائرية من الجوز الداكن وإضاءات حلقية تخلق أجواءً تجمع بين الهدوء والحضور. على 175 م²، صُنعت جميع الأثاث حسب الطلب وركّبت بدقة عالية.</p>"
+        }
+    }
+]

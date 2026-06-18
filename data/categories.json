@@ -1,0 +1,46 @@
+[
+    {
+        "slug": "office",
+        "label": "Büro",
+        "labels": {
+            "de": "Büro",
+            "en": "Office",
+            "tr": "Ofis",
+            "ru": "Офисы",
+            "ar": "مكاتب"
+        }
+    },
+    {
+        "slug": "gastro",
+        "label": "Gastronomie",
+        "labels": {
+            "de": "Gastronomie",
+            "en": "Gastronomy",
+            "tr": "Gastronomi",
+            "ru": "Рестораны",
+            "ar": "مطاعم"
+        }
+    },
+    {
+        "slug": "fitness",
+        "label": "Fitness",
+        "labels": {
+            "de": "Fitness",
+            "en": "Fitness",
+            "tr": "Fitness",
+            "ru": "Фитнес",
+            "ar": "لياقة"
+        }
+    },
+    {
+        "slug": "werkstatt",
+        "label": "Werkstatt",
+        "labels": {
+            "de": "Werkstatt",
+            "en": "Workshop",
+            "tr": "Atölye",
+            "ru": "Автосервис",
+            "ar": "ورشة"
+        }
+    }
+]
