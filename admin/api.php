@@ -1,13 +1,12 @@
 <?php
 /**
- * Ramus Interior admin panel API.
- *
- * NOTE: this endpoint has no authentication yet. It is reachable by anyone
- * who can reach /admin/api.php. Add a login gate before relying on this
- * in production (see admin/README.md).
+ * Ramus Interior admin panel API. Behind the session login in auth.php.
  */
 
 declare(strict_types=1);
+
+require __DIR__ . '/auth.php';
+require_login();
 
 header('Content-Type: application/json; charset=utf-8');
 

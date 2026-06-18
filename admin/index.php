@@ -1,3 +1,8 @@
+<?php
+declare(strict_types=1);
+require __DIR__ . '/auth.php';
+require_login();
+?>
 <!DOCTYPE html>
 <html lang="tr">
 <head>
@@ -46,13 +51,14 @@
       <a href="https://ramusinterior.de" target="_blank" rel="noopener"><span class="icon">open_in_new</span></a>
     </div>
 
-    <div class="user-chip">
+    <a class="user-chip" href="logout.php" title="Çıkış yap" style="text-decoration:none;color:inherit;">
       <div class="user-avatar">RA</div>
-      <div>
+      <div style="flex:1;">
         <div class="user-name">Yönetici</div>
-        <div class="user-role">Panel</div>
+        <div class="user-role">Çıkış yap</div>
       </div>
-    </div>
+      <span class="icon" style="color:#9a9085;">logout</span>
+    </a>
   </aside>
 
   <main class="main">

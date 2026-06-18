@@ -58,6 +58,10 @@
       }
     }
     const res = await fetch(url, opts);
+    if (res.status === 401) {
+      window.location.href = 'login.php';
+      throw new Error('Oturum süresi doldu.');
+    }
     const data = await res.json().catch(() => ({}));
     if (!res.ok || data.status === 'error') {
       throw new Error(data.message || 'Bir hata oluştu.');
@@ -516,5 +520,12 @@
     }
   });
 
+  window.addEventListener('error', (e) => {
+    if ($content) {
+      $content.innerHTML = `<div class="empty-state">Bir hata oluştu: ${esc(e.message)}. Sayfayı yenileyip tekrar deneyin.</div>`;
+    }
+  });
+
+  render(); // show the empty list/skeleton immediately, before data arrives
   loadAll();
 })();

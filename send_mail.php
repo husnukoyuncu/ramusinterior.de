@@ -35,22 +35,26 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     // E-posta konusu
     $subject = empty($subject_input) ? "Websitesi İletişim Formu: $name" : $subject_input;
 
+    $mailConfigPath = __DIR__ . '/mail-config.php';
+    if (!file_exists($mailConfigPath)) {
+        http_response_code(500);
+        echo json_encode(["status" => "error", "message" => "Mail yapılandırması eksik (mail-config.php bulunamadı)."]);
+        exit;
+    }
+    $mailConfig = require $mailConfigPath;
+
     // PHPMailer Kurulumu
     $mail = new PHPMailer(true);
 
     try {
         // Sunucu Ayarları
         $mail->isSMTP();                                            // SMTP kullan
-        
-        // ==========================================
-        // DİKKAT: BURAYI KENDİ BİLGİLERİNİZLE DOLDURUN
-        // ==========================================
-        $mail->Host       = 'mail.ramusinterior.de';                // SMTP sunucu adresi (genellikle mail.alanadiniz.com)
+        $mail->Host       = $mailConfig['host'];                    // SMTP sunucu adresi
         $mail->SMTPAuth   = true;                                   // SMTP doğrulamasını aç
-        $mail->Username   = 'noreply@ramusinterior.de';             // Oluşturduğunuz tam e-posta adresi
-        $mail->Password   = 'N.132132.!y';          // E-posta adresinin şifresi
+        $mail->Username   = $mailConfig['username'];                // Oluşturduğunuz tam e-posta adresi
+        $mail->Password   = $mailConfig['password'];                // E-posta adresinin şifresi (mail-config.php içinde, git'e girmez)
         $mail->SMTPSecure = PHPMailer::ENCRYPTION_SMTPS;            // SSL şifreleme (cPanel genelde SSL port 465 kullanır)
-        $mail->Port       = 465;                                    // SSL için port (Eğer 587 ise SMTPSecure = ENCRYPTION_STARTTLS yapın)
+        $mail->Port       = $mailConfig['port'];                    // SSL için port (Eğer 587 ise SMTPSecure = ENCRYPTION_STARTTLS yapın)
         $mail->CharSet    = 'UTF-8';
 
         // Gönderici ve Alıcı Ayarları
