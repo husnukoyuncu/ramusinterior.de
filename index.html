@@ -507,6 +507,7 @@
       display: flex; align-items: flex-end; padding: 28px;
     }
     .proj-card:hover .proj-hover { opacity: 1; }
+    .proj-card:hover .proj-strip { opacity: 0; }
     .proj-hover-body { transform: translateY(6px); transition: transform .3s var(--ease); }
     .proj-card:hover .proj-hover-body { transform: none; }
     .proj-tag {
@@ -525,6 +526,7 @@
       padding: 14px 18px 16px;
       background: linear-gradient(to top,rgba(0,0,0,.72),transparent);
       pointer-events: none;
+      opacity: 1; transition: opacity .3s var(--ease);
     }
     .proj-strip-name {
       font-family: 'Cinzel', serif; font-size: .875rem;
@@ -1774,7 +1776,6 @@
         <div class="proj-hover" aria-hidden="true">
           <div class="proj-hover-body">
             <div class="proj-tag">${catLabel(p.category, lang)}</div>
-            <div class="proj-name-h">${projName(p, lang)}</div>
             <div class="proj-meta">${p.location} &nbsp;·&nbsp; ${p.area}</div>
           </div>
         </div>
