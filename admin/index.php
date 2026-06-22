@@ -26,6 +26,11 @@ require_login();
 <link rel="stylesheet" href="admin.css">
 </head>
 <body>
+<button class="mobile-toggle" type="button" aria-label="Menüyü aç/kapat"
+        onclick="document.querySelector('.sidebar').classList.toggle('open');document.querySelector('.sidebar-overlay').classList.toggle('show');">
+  <span class="icon">menu</span>
+</button>
+<div class="sidebar-overlay" onclick="document.querySelector('.sidebar').classList.remove('open');this.classList.remove('show');"></div>
 <div class="layout">
 
   <aside class="sidebar">
